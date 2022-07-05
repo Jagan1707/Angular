@@ -1,0 +1,42 @@
+
+<body>
+    <div class="container signup">   
+        <b> <span>Sign-in</span></b>
+        <div class="cont">
+          <div class="mb-3 row ">
+              <label class="col-sm-2 col-form-label">userName</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control"  [(ngModel)] = "typeuser.name " >
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label">password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" [(ngModel)] = "typeuser.password">
+              </div>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3 btn" >Login</button>
+            </div>
+      </div>
+    </div>
+</body>
+
+
+<div class="temp">
+    <div *ngIf = "user.name == typeuser.name && user.password == typeuser.password; then userExist else userNotExist"> 
+    </div>
+     <ng-template #userExist>
+      <h3>Login successfull</h3>
+      <hr>
+      <h3>Name List</h3>
+      <div *ngFor = "let i of userDetail">
+        
+        <li>{{i.Name}}</li>
+      </div>
+     </ng-template>
+     <ng-template #userNotExist>
+      <h3>Login unsuccessfull</h3>
+      <P>Please enter valid username and password</P>
+     </ng-template>
+    </div>

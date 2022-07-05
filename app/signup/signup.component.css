@@ -1,0 +1,20 @@
+.signup{
+    margin-top: 50px;
+    width: 800px;
+    height: 300PX;
+    border-radius: 10px;
+    /* background-image: url('https://media.istockphoto.com/vectors/red-modern-technology-design-background-with-dots-texture-vector-on-vector-id1169276270?k=20&m=1169276270&s=612x612&w=0&h=gdgjjOI0s64gJ9eqBoLbbMqE2Z7ZJb3cnD0lj2fcfDU='); */
+}
+
+.signup .cont{
+    padding-top: 40px;
+    
+}
+.signup span{
+    padding-left: 350px;
+    font-style: italic;
+}
+.btn{
+   margin-left: 350px;
+   width: 30%; 
+}
