@@ -16,19 +16,7 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
-        <a class="nav-item nav-link" href="#">Sign-up</a>
-        <a class="nav-item nav-link" href="#">Sign-in</a>
-      </div>
-    </div>
-  </nav>
+ 
 
 <div class="container">
  <div *ngFor = "let user of users">
@@ -47,6 +35,8 @@
 </div>
 <br>
 
+<hr>
+
 <h3>My-service provider</h3>
 <div *ngFor = "let prod of data.productDetail">
   <ul>
@@ -56,4 +46,30 @@
 
   </ul>
 </div>
+<hr>
+
+
+<!-- data transfer parent component to child component  -->
+<h3>Stranger Thinks cast</h3>
+<div >
+  <table class="table">
+    <thead class="thead-light">
+      <tr> 
+        <th scope="col">S.No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+    <tbody *ngFor = "let cast of childcom">
+      <tr>
+        <td>{{cast.id}}</td>
+        <td>{{cast.name}}</td>
+        <td>{{cast.role}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
+</div>
+
+

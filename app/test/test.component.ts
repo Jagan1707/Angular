@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MyserviceService } from '../myservice.service';
 
 @Component({
@@ -34,14 +34,38 @@ export class TestComponent implements OnInit {
     place:'ENG'
   }
   ]
+
+  shelbyFamily = [
+    {
+      id : 1,
+      name:'Thomas',
+      role : "secound brother"
+    },
+    {
+      id:2,
+      name : "Arthur",
+      role : "first brother"
+    },
+    {
+      id : 3,
+      name : "Jhon",
+      role : "third brother"
+    }
+
+  ]
   
 
   constructor(public data : MyserviceService) { }
 
-  ngOnInit(): void {
-    
-  
-  }
+@Input('childcom') childcom :any 
+@Output() shelby = new EventEmitter<number>()
+
+random(){
+  const numbers = Math.random();
+  this.shelby.emit(numbers)
+}
+
+  ngOnInit(): void { }
   changename(){
     this.userName = "Rajesh" 
    }
