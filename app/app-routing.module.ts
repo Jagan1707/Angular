@@ -5,7 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
-  {path:'',component:TestComponent},
+  {path:'home',component:TestComponent},
   {path:'signup',component:SignupComponent},
   {path:'login',component:LoginComponent}
 ];

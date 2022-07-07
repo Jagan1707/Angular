@@ -26,5 +26,5 @@ productDetail = [
 ]
   constructor() { }
 
-
+  
 }
